@@ -26,6 +26,3 @@ def convert_rna_to_protein(m_rna) -> str:
 
     return ''.join(protein)
 
-
-if __name__ == '__main__':
-    create_database()

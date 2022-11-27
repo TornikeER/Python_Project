@@ -1,17 +1,16 @@
-
-from os import path
+from os.path import exists as is_file
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from Data.db_tables import Dna, Rna, RnaCodon, AminoAcid
 from Data.db_tables import Base
 from Data.Tables import transcription_table, translation_table
 
-ENGINE = create_engine('sqlite:///dataBase_for_task2.db')
+ENGINE = create_engine('sqlite:///DBs/dataBase_for_task2.db')
 SESSION = sessionmaker(ENGINE)
 
 
-def create_database() -> None:
-    if path.isfile('dataBase_for_task2.db'):
+def create_database():
+    if is_file('DBs/dataBase_for_task2.db'):
         return
 
     Base.metadata.create_all(ENGINE)
@@ -30,5 +29,3 @@ def create_database() -> None:
                 new_codon = RnaCodon(codon_name=codon, amino_acid=new_acid)
             session.add(new_codon)
         session.commit()
-
-

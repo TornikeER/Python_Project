@@ -1,5 +1,5 @@
 from Data import Tables
-from Script import convert_dna_to_rna, convert_rna_to_protein
+from Script_Task1 import convert_dna_to_rna, convert_rna_to_protein
 
 
 def test_function(function, input_seq, output_seq):

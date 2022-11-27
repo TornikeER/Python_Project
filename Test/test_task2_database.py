@@ -1,5 +1,6 @@
 import unittest
 
+from Data.db_create import create_database
 from Script_task2 import convert_dna_to_rna, convert_rna_to_protein
 
 
@@ -26,3 +27,7 @@ class ScriptTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+if __name__ == '__main__':
+    create_database()
