@@ -1,4 +1,4 @@
-import Data
+from Data import Tables
 from Script import convert_dna_to_rna, convert_rna_to_protein
 
 
@@ -8,5 +8,5 @@ def test_function(function, input_seq, output_seq):
     assert result == output_seq
 
 
-test_function(convert_dna_to_rna, Data.input_dna, Data.correct_rna)
-test_function(convert_rna_to_protein, Data.correct_rna, Data.correct_protein)
+test_function(convert_dna_to_rna, Tables.input_dna, Tables.correct_rna)
+test_function(convert_rna_to_protein, Tables.correct_rna, Tables.correct_protein)
