@@ -1,5 +1,7 @@
 # Python_Project
 
+Commits are on different branches. 
+
 ### Project can be run by 2 different ways using Docker and manually from IDE 
 **If you want to run project from IDE you should check out on feature/Tornike branch**
 
