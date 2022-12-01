@@ -1,17 +1,18 @@
-from os.path import exists as is_file
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from Data.db_tables import Dna, Rna, RnaCodon, AminoAcid
 from Data.db_tables import Base
 from Data.Tables import transcription_table, translation_table
 
-ENGINE = create_engine('sqlite:///DBs/dataBase_for_task2.db')
+# ENGINE = create_engine('sqlite:///DBs/dataBase_for_task2.db')
+DATABASE_URL = 'postgresql+psycopg2://admin:password@db:5432/qpa_data'
+ENGINE = create_engine(DATABASE_URL)
 SESSION = sessionmaker(ENGINE)
 
 
 def create_database():
-    if is_file('DBs/dataBase_for_task2.db'):
-        return
+    # if is_file('DBs/dataBase_for_task2.db'):
+    #     return
 
     Base.metadata.create_all(ENGINE)
     with SESSION() as session:
@@ -29,3 +30,7 @@ def create_database():
                 new_codon = RnaCodon(codon_name=codon, amino_acid=new_acid)
             session.add(new_codon)
         session.commit()
+
+
+if __name__ == '__main__':
+    create_database()

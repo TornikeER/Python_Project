@@ -16,4 +16,4 @@ def gc_ratio_function(gc_input: str, step: int):
     plt.title('GC-content metric')
     plt.xlabel('Genome position')
     plt.ylabel('GC  (%)')
-    plt.savefig('ResultsAndOtherFiles/gc_ratio.png')
+    plt.savefig('gc_ratio.png')

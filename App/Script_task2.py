@@ -1,4 +1,3 @@
-from Data.db_create import create_database
 from Data.db_query import transcription_query, translation_query
 
 
