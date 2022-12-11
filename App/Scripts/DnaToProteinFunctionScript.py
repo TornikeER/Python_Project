@@ -1,4 +1,4 @@
-from Data import Tables
+from Data import Constants
 
 
 def convert_dna_to_rna(dna_sequence) -> str:
@@ -12,7 +12,7 @@ def convert_rna_to_protein(rna_sequence) -> str:
     for i in range(0, len(rna_sequence), 3):
         codon = rna_sequence[i:i + 3]
         if len(codon) == 3:
-            protein += Tables.Amino_Dict[codon]
+            protein += Constants.Amino_Dict[codon]
 
     return protein
 

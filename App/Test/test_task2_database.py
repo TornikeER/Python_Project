@@ -1,6 +1,6 @@
 import unittest
 
-from Script_task2 import convert_dna_to_rna, convert_rna_to_protein
+from Scripts.DnaToProteinFunctionScriptUsingDatabases import convert_dna_to_rna, convert_rna_to_protein
 
 
 class DatabaseTest(unittest.TestCase):

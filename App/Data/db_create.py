@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from Data.db_tables import Dna, Rna, RnaCodon, AminoAcid
 from Data.db_tables import Base
-from Data.Tables import transcription_table, translation_table
+from Data.Constants import transcription_table, translation_table
 
 # ENGINE = create_engine('sqlite:///DBs/dataBase_for_task2.db')
 DATABASE_URL = 'postgresql+psycopg2://admin:password@db:5432/qpa_data'

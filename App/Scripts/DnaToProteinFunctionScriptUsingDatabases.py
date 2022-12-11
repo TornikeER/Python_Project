@@ -12,10 +12,11 @@ def convert_rna_to_protein(m_rna) -> str:
     protein = []
     index = 0
     current_triplet = []
+    sequence = 3
 
-    while index < len(m_rna):
+    for index in range(0, len(m_rna)):
         current_triplet.append(m_rna[index])
-        if (index + 1) % 3:
+        if (index + 1) % sequence:
             index += 1
             continue
         str_triplet = ''.join(current_triplet)

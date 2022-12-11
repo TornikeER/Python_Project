@@ -1,8 +1,8 @@
 import unittest
 from os.path import exists as is_file
 
-from Data.Tables import Covid_dna
-from Script_task3 import gc_ratio_function
+from Data.Constants import Covid_dna
+from Scripts.PlottingGraphFunctionScript import gc_ratio_function
 
 
 class PlottingTest(unittest.TestCase):
